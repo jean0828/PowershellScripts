@@ -1,0 +1,1 @@
+﻿Get-AdGroupMember -identity "GS Equipos Sin Administradores Locales" -Recursive | select name, distinguishedName  | Export-csv -path "C:\users\public\equiposconpolitica03092021.csv" -NoTypeInformation -Encoding UTF8
