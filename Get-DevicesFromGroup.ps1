@@ -1,1 +1,1 @@
-﻿Get-AdGroupMember -identity "GS Equipos Sin Administradores Locales" -Recursive | select name, distinguishedName  | Export-csv -path "C:\users\public\equiposconpolitica03092021.csv" -NoTypeInformation -Encoding UTF8
+﻿Get-AdGroupMember -identity "Active Directory Group where is the devices" -Recursive | select name, distinguishedName  | Export-csv -path "C:\export.csv" -NoTypeInformation -Encoding UTF8
