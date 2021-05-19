@@ -1,4 +1,4 @@
-﻿$nameofgroup= 'GS Equipos Sin Administradores Locales'
+﻿$nameofgroup= 'Security Group Devices'
 $groupsusers=Get-ADGroup -Identity $nameofgroup | 
   ForEach-Object{
                 $settings=@{Group=$_.DistinguishedName;Member=$null}
@@ -8,4 +8,4 @@ $groupsusers=Get-ADGroup -Identity $nameofgroup |
                     New-Object PsObject -Property $settings
                 }
     }
-    $groupsusers | Export-Csv C:\Users\Public\Equiposestandar.csv –NoTypeInformation
+    $groupsusers | Export-Csv C:\devices.csv –NoTypeInformation
