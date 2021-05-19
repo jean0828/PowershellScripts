@@ -1,6 +1,6 @@
-﻿$exportlocation = "C:\Users\Public\$(Get-Date -UFormat '%Y%m%d')_removeusers.csv"
+﻿$exportlocation = "C:\$(Get-Date -UFormat '%Y%m%d')_removeusers.csv"
 $current = Get-Date
-$a= Get-ADGroupMember "VPN Acceso General" -Recursive | Get-ADUser -Properties "LastLogonDate" | Select Name,SamAccountName,LastLogonDate
+$a= Get-ADGroupMember "Group1" -Recursive | Get-ADUser -Properties "LastLogonDate" | Select Name,SamAccountName,LastLogonDate
 $a | ForEach-Object {
     if (($current - $_.LastLogonDate).Days -gt 90) {
     $string = [pscustomobject]@{
