@@ -1,1 +1,1 @@
-﻿Get-AdGroupMember -identity "Group" -Recursive | select name, samaccountname  | Export-csv -path "C:\export.csv" -NoTypeInformation -Encoding UTF8
+﻿Get-AdGroupMember -identity "AD Group" -Recursive | Get-ADUser -Properties LastLogonDate | Select Name,SamAccountName,LastLogonDate | Export-csv -path ".\mfa.csv" -NoTypeInformation -Encoding UTF8
