@@ -11,3 +11,5 @@ You only need start each of the scripts in an Powershell console to use it.
 4. Get-UsersFromGroup.ps1 - Export the users from specific group in AD to csv file.
 5. Get-UsersToDeleteFromDate.ps1 - From specific group exports in a csv file which users have a logon more than 90 days.
 6. Remove-UsersFromDate.ps1 - From specific group delete users have a logon more than 90 days in that group.
+7. get-allpublicIPs.ps1 - get all public IPs from Azure
+8. verifyuserstatus.ps1 - Based on a list, check if the user is active or not
